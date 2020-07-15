@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MusicappService } from 'src/app/services/musicapp.service';
 
 @Component({
   selector: 'app-home',
@@ -7,7 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  nuevasCanciones: any[] = [];
+
+  constructor( private musicapp: MusicappService) {
+
+    this.musicapp.getNewReleases()
+      .subscribe( ( data: any ) => {
+        console.log(data.albums.items);
+        this.nuevasCanciones = data.albums.items;
+      });
+
+  }
 
   ngOnInit(): void {
   }
