@@ -9,12 +9,18 @@ import { MusicappService } from 'src/app/services/musicapp.service';
 export class HomeComponent implements OnInit {
 
   nuevasCanciones: any[] = [];
+  loading: boolean;
 
   constructor( private musicapp: MusicappService) {
+
+    // Mientras esta cargando la data loading true
+    this.loading = true;
 
     this.musicapp.getNewReleases()
       .subscribe( ( data: any ) => {
         this.nuevasCanciones = data;
+        // Cuando ya ha cargado la data ponemos el loading a false
+        this.loading = false;
       });
 
   }

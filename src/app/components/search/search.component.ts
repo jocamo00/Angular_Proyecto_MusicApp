@@ -9,6 +9,7 @@ import { MusicappService } from 'src/app/services/musicapp.service';
 export class SearchComponent implements OnInit {
 
   artistas: any[] = [];
+  loading: boolean;
 
   constructor( private musicaap: MusicappService ) { }
 
@@ -17,10 +18,16 @@ export class SearchComponent implements OnInit {
 
   buscar(termino: string){
     console.log(termino);
+    // Mientras esta cargando la data loading true
+    this.loading = true;
+
     this.musicaap.getArtista( termino )
       .subscribe( (data: any ) => {
         console.log(data);
         this.artistas = data;
+
+        // Cuando ya ha cargado la data ponemos el loading a false
+        this.loading = false;
       });
   }
 
