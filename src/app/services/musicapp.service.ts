@@ -14,7 +14,7 @@ export class MusicappService {
 
     const headers = new HttpHeaders({
       // tslint:disable-next-line:object-literal-key-quotes
-      'Authorization': 'Bearer BQCYFMnx9gssjvTffxsV51nKUt5SebNKgMn5-0sqT6FWdZMjzYIzjRwI1bJoWvHdNuobYyHQl1j3GA4XSmw'
+      'Authorization': 'Bearer BQDlDKP0eJzBhcVbQut8Jhjcf5zv-5rY9tz85gB3gkdlTFwhB3oCkgAYxaYUkDNM_wT9bNmoOOxzNUfkESw'
     });
 
     return this.http.get(url, { headers });
@@ -30,10 +30,25 @@ export class MusicappService {
   }
 
   // Método para obtener artistas en la búsqueda
-  getArtista( termino: string ){
+  getArtistas( termino: string ){
     return this.getQuery(`search?q=${ termino }&type=artist&limit=15`)
       // Si la función flecha tiene una unica linea y es el return se puede hacer lo siguiente
       // tslint:disable-next-line:no-string-literal
       .pipe( map( data => data['artists'].items ));
+  }
+
+  // Método para mostrar un artista por id
+  getArtista( id: string ){
+    return this.getQuery(`artists/${ id }`);
+      // Si la función flecha tiene una unica linea y es el return se puede hacer lo siguiente
+      // tslint:disable-next-line:no-string-literal
+      // .pipe( map( data => data['artists'].items ));
+  }
+
+  // Método para mostrar canciones top de un artista
+  getTopTracks( id: string ){
+    return this.getQuery(`artists/${ id }/top-tracks?country=es`)
+      // tslint:disable-next-line:no-string-literal
+      .pipe( map( data => data['tracks']));
   }
 }

@@ -21,7 +21,7 @@ export class SearchComponent implements OnInit {
     // Mientras esta cargando la data loading true
     this.loading = true;
 
-    this.musicaap.getArtista( termino )
+    this.musicaap.getArtistas( termino )
       .subscribe( (data: any ) => {
         console.log(data);
         this.artistas = data;
