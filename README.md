@@ -1,27 +1,71 @@
-# Musicapp
+# MusicApp
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.2.
+_Proyecto realizado con Angular, consumiento la API de Spotify.
 
-## Development server
+En la página principal muestra los albúnes Top del momento, se pueden realizar búsquedas por albúnes o artistas y reproducir sus canciones._
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Code scaffolding
+## Comenzando 🚀
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+_Para obtener una copia del proyecto en funcionamiento en tu máquina local para propósitos de desarrollo y pruebas, necesitaras descargarlo o clonar el repositorio a tu máquina._
 
-## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+### Tecnologías🛠️
 
-## Running unit tests
+Programas y Frameworks utilizados para el desarrollo y pruebas del proyecto:
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+* [VSCode] - Editor de código usado - (https://code.visualstudio.com/).
+* [Angular] - Framework de desarrollo.
+* [Bootstrap] - Es un frameword de diseño;
+* [GitHub] - Control de versiones.
 
-## Running end-to-end tests
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+### Instalación 🔧
 
-## Further help
+Una vez descargado, descomprimido y ubicado en el directorio del proyecto, instale las dependencias y devDependencies.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+```sh
+$ npm install
+```
+
+Inicie el servidor
+
+```sh
+$ ng serve
+```
+
+Las instrucciones sobre cómo usarlas en su propia aplicación están vinculadas a continuación.
+GitHub  [plugins/github/README.md][PlGh] 
+
+
+## Video
+(https://youtu.be/OJkOs7VWbHc)
+
+
+## Imagenes
+
+![Screenshot](01.png)
+![Screenshot](02.png)
+![Screenshot](03.png)
+
+
+## Wiki 📖
+
+Puedes encontrar mucho más de cómo utilizar este proyecto en nuestra [Wiki](https://github.com/jocamo00/Angular_Proyecto_MusicApp)
+
+## Versionado 📌
+
+Usamos [GitHub](https://github.com/) para el versionado. Para todas las versiones disponibles, mira los [tags en este repositorio](https://github.com/jocamo00/Angular_Proyecto_MusicApp).
+
+## Autor ✒️
+
+* **Jose Carreres** - [jocamo00](https://github.com/jocamo00)
+
+
+
+
+
+
+
+
+

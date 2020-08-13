@@ -14,7 +14,7 @@ export class MusicappService {
 
     const headers = new HttpHeaders({
       // tslint:disable-next-line:object-literal-key-quotes
-      'Authorization': 'Bearer BQDlDKP0eJzBhcVbQut8Jhjcf5zv-5rY9tz85gB3gkdlTFwhB3oCkgAYxaYUkDNM_wT9bNmoOOxzNUfkESw'
+      'Authorization': 'Bearer BQA9x2wwI6zMQxydiKIl19WKZ-jf7OMx80amjoXBUrumOrfua7Qd8AHwJJ4rbbCVWoHHcNA1MAi2JRN_9oI'
     });
 
     return this.http.get(url, { headers });
